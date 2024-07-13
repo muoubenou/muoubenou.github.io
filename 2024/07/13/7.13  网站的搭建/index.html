@@ -1,0 +1,615 @@
+
+  <!DOCTYPE html>
+  <html lang="en"  >
+  <head>
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  
+  <script>window.icon_font = '4552607_tq6stt6tcg';window.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ"};</script>
+  
+  
+  <title>
+    
+    Hexo
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CUbuntu%20Mono:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CUbuntu%20Mono:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+<link rel="stylesheet" href="/css/loader.css">
+
+  <meta name="description" content="网站的搭建  切换php为5.5.9  https:&#x2F;&#x2F;public.xp.cn&#x2F;upgrades&#x2F;phpStudy_64.zip）（安装时记得以管理员方式）  启动阿帕奇和MySQL  进入网站的根目录并删除里面的内容  在里面创建index.php的文件（在www.目录里面，网站可以直接访问。这里存网站的前端）  复制原始框架到文件中    （实例里有代码解释） 123456789101112">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/07/13/7.13%20%20%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="网站的搭建  切换php为5.5.9  https:&#x2F;&#x2F;public.xp.cn&#x2F;upgrades&#x2F;phpStudy_64.zip）（安装时记得以管理员方式）  启动阿帕奇和MySQL  进入网站的根目录并删除里面的内容  在里面创建index.php的文件（在www.目录里面，网站可以直接访问。这里存网站的前端）  复制原始框架到文件中    （实例里有代码解释） 123456789101112">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1720868017203-0262d687-c22a-4613-9e4d-d4c62d86f596.png#averageHue=%23fdfdfd&clientId=ua1b9b578-a3f8-4&from=paste&height=123&id=ud509881b&originHeight=934&originWidth=1577&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=27324&status=done&style=none&taskId=u15f156e5-fa28-4d0b-82b7-0670ccd3037&title=&width=208">
+<meta property="article:published_time" content="2024-07-13T12:26:19.915Z">
+<meta property="article:modified_time" content="2024-07-13T11:06:49.444Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1720868017203-0262d687-c22a-4613-9e4d-d4c62d86f596.png#averageHue=%23fdfdfd&clientId=ua1b9b578-a3f8-4&from=paste&height=123&id=ud509881b&originHeight=934&originWidth=1577&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=27324&status=done&style=none&taskId=u15f156e5-fa28-4d0b-82b7-0670ccd3037&title=&width=208">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css">
+
+  
+  
+  
+  
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"></script>
+
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/wowjs@1.1.3/css/libs/animate.css">
+
+    
+<script src="https://npm.webcache.cn/wowjs@1.1.3/dist/wow.min.js"></script>
+
+    <script>
+      new WOW({
+        offset: 0,
+        mobile: true,
+        live: false
+      }).init();
+    </script>
+  
+  
+    <script src="/sw.js"></script>
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+          <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff6e6b" />
+          <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z" fill="#fd0d00" />
+          <path d="M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95" fill="#fd0d00" />
+        </svg>
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      <span class="main-nav-link-wrap">
+        <span class="main-nav-icon"></span>
+        <a class="main-nav-link" href="/">Home</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <span class="main-nav-icon"></span>
+        <a class="main-nav-link" href="/archives">Archives</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <span class="main-nav-icon"></span>
+        <a class="main-nav-link" href="/about">About</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <span class="main-nav-icon"></span>
+        <a class="main-nav-link" href="/friend">Friend</a>
+      </span>
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+    
+    
+    
+  </nav>
+</div>
+<header id="header">
+  
+    
+      <img fetchpriority="high" src="/images/banner.webp" alt="">
+    
+  
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <div id="logo-wrap">
+        
+          
+          
+            <a href="/" id="logo">
+              <h1>Hexo</h1>
+            </a>
+          
+        
+      </div>
+      
+        
+        <h2 id="subtitle-wrap">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content" class="outer">
+          
+          <section id="main"><article id="post-7.13  网站的搭建" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    <div class="article-meta">
+      <div class="article-date wow slideInLeft">
+  <a href="/2024/07/13/7.13%20%20%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/" class="article-date-link">
+    <time datetime="2024-07-13T12:26:19.915Z" itemprop="datePublished">2024-07-13</time>
+  </a>
+</div>
+
+      
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><strong>网站的搭建</strong></p>
+<ol>
+<li><p>切换php为5.5.9  <a target="_blank" rel="noopener" href="https://public.xp.cn/upgrades/phpStudy_64.zip">https://public.xp.cn/upgrades/phpStudy_64.zip</a>）（安装时记得以管理员方式）</p>
+</li>
+<li><p>启动阿帕奇和MySQL</p>
+</li>
+<li><p>进入网站的根目录并删除里面的内容</p>
+</li>
+<li><p>在里面创建index.php的文件（在www.目录里面，网站可以直接访问。这里存网站的前端）</p>
+</li>
+<li><p>复制原始框架到文件中    （实例里有代码解释）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;./index.css&quot;&gt;</span><br><span class="line">    &lt;script src=&quot;./vue.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=&quot;app&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;script src=&quot;./axios.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&quot;./index.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        new Vue(&#123;</span><br><span class="line">            el: &#x27;#app&#x27;,</span><br><span class="line">            data: function () &#123;</span><br><span class="line">                return &#123;</span><br><span class="line">                    visible: false,</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            created() &#123;</span><br><span class="line">                this.login();</span><br><span class="line">            &#125;,</span><br><span class="line">            methods: &#123;</span><br><span class="line">                login:function()&#123;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在www.文件夹里新建api文件夹（一般用于放后端文件）</p>
+</li>
+<li><p>在后端文件里建login.php文本（存后端代码</p>
+</li>
+<li><p>代码如下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="title function_ invoke__">header</span>(<span class="string">&quot;Access-Control-Allow-Origin: *&quot;</span>); <span class="comment">//跨域</span></span><br><span class="line"><span class="title function_ invoke__">header</span>(<span class="string">&quot;Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE&quot;</span>);</span><br><span class="line"><span class="title function_ invoke__">header</span>(<span class="string">&quot;Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With&quot;</span>);</span><br><span class="line"><span class="variable">$link</span> = <span class="title function_ invoke__">mysqli_connect</span>(<span class="string">&quot;localhost&quot;</span>, <span class="string">&quot;root&quot;</span>, <span class="string">&quot;root&quot;</span>, <span class="string">&quot;test&quot;</span>, <span class="string">&quot;3309&quot;</span>) <span class="keyword">or</span> <span class="keyword">exit</span>(<span class="title function_ invoke__">json_encode</span>([<span class="string">&#x27;error&#x27;</span> =&gt; <span class="string">&#x27;false&#x27;</span>]));      <span class="comment">//端口默认为3306，这里改了端口</span></span><br><span class="line"><span class="title function_ invoke__">mysqli_query</span>(<span class="variable">$link</span>, <span class="string">&quot;set names utf8&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="title function_ invoke__">header</span>(<span class="string">&#x27;Content-Type: text/html; charset=utf-8&#x27;</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入前后端分离后台的材料包</p>
+</li>
+</ol>
+<p>前后端分离后台<br>下载材料包 html使用的vue材料包，<br><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2024/zip/46252388/1720833981613-576a750a-a1e1-478d-bc56-169c477ce299.zip?_lake_card=%7B%22src%22:%22https://www.yuque.com/attachments/yuque/0/2024/zip/46252388/1720833981613-576a750a-a1e1-478d-bc56-169c477ce299.zip%22,%22name%22:%22html%E4%BD%BF%E7%94%A8vue%E6%9D%90%E6%96%99%E5%8C%85.zip%22,%22size%22:396254,%22ext%22:%22zip%22,%22source%22:%22%22,%22status%22:%22done%22,%22download%22:true,%22taskId%22:%22u6a4ec449-6a9c-4f07-9fdb-828b8a13778%22,%22taskType%22:%22upload%22,%22type%22:%22application/x-zip-compressed%22,%22__spacing%22:%22both%22,%22mode%22:%22title%22,%22id%22:%22u8d08b3fe%22,%22margin%22:%7B%22top%22:true,%22bottom%22:true%7D,%22card%22:%22file%22%7D">html使用vue材料包.zip</a><br>把<strong>解压出来的文件</strong>放入www.文件夹内</p>
+<p>.&#x2F;代表同级目录 ..&#x2F;表示上级目录</p>
+<p><strong>网站的搭建实操一</strong><br>准备工作：</p>
+<ul>
+<li>可以复制粘贴的前端材料网站：<a target="_blank" rel="noopener" href="https://element.eleme.cn/#/zh-CN/component/tag">https://element.eleme.cn/#/zh-CN/component/tag</a></li>
+<li>网站的使用从网站上选要用的功能复制粘贴</li>
+<li>规则：</li>
+</ul>
+<ol>
+<li>我们需要看他的代码选出需要装到块中的内容（一般在顶端）</li>
+<li>然后看<script></script>    标签内的内容提取出他里面的变量。放到框架里的return{}里</li>
+<li>然后看代码里的方法，把方法粘贴到我们的methods: {}里<strong>注意方法用:  ,  隔开</strong></li>
+</ol>
+<p>MySQL的准备</p>
+<ol>
+<li>打开navicat 连接到自己的数据库，可以在连接处右键创立新的数据库	字符集选则utf8mb4（可以有表情符号）排序规则选utf8mb4_general_ci</li>
+<li>建立表要设置主键。  可以参考下图：</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1720868017203-0262d687-c22a-4613-9e4d-d4c62d86f596.png#averageHue=%23fdfdfd&clientId=ua1b9b578-a3f8-4&from=paste&height=123&id=ud509881b&originHeight=934&originWidth=1577&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=27324&status=done&style=none&taskId=u15f156e5-fa28-4d0b-82b7-0670ccd3037&title=&width=208" alt="image.png"></p>
+<ol start="3">
+<li>mysql远程连接(在mysql cmd界面 或者新建查询里输入以下命令)<ol>
+<li><code>grant all privileges on *.* to &#39;root&#39;@&#39;%&#39; identified by &#39;root&#39; with grant option;</code></li>
+<li><code>flush privileges;</code></li>
+</ol>
+</li>
+</ol>
+<p><strong>案例实操</strong><br>下列代码和解释</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;en&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;                                                        <span class="comment">//设置编码格式</span></span><br><span class="line">    &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;        <span class="comment">//？</span></span><br><span class="line">    &lt;title&gt;登录&lt;/title&gt;                                                       <span class="comment">//设置网页标题</span></span><br><span class="line">    &lt;link rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;./index.css&quot;</span>&gt;                                <span class="comment">// rel表示链接关系，href表示链接</span></span><br><span class="line">    &lt;script src=<span class="string">&quot;./vue.js&quot;</span>&gt;&lt;/script&gt;                                          <span class="comment">//引入vue.js（是文件里的javascript源文件）</span></span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        <span class="comment">#zhong &#123;</span></span><br><span class="line">            <span class="comment">/* 将元素定位到窗口中央 */</span></span><br><span class="line">            position: absolute;</span><br><span class="line">            top: <span class="number">50</span>%;</span><br><span class="line">            left: <span class="number">50</span>%;</span><br><span class="line">            transform: <span class="title function_ invoke__">translate</span>(-<span class="number">50</span>%, -<span class="number">50</span>%);</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 设置宽度和最大宽度 */</span></span><br><span class="line">            width: <span class="number">50</span>%;</span><br><span class="line">            max-width: <span class="number">800</span>px;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 设置高度和最大高度 */</span></span><br><span class="line">            height: <span class="number">50</span>%;</span><br><span class="line">            max-height: <span class="number">600</span>px;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 使元素水平居中和垂直居中 */</span></span><br><span class="line">            display: flex;</span><br><span class="line">            justify-content: center;</span><br><span class="line">            align-items: center;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 设置背景颜色 */</span></span><br><span class="line">            background: <span class="comment">#7a368b;</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#all &#123;</span></span><br><span class="line">            <span class="comment">/* 设置元素宽度和高度为浏览器视口宽度和高度 */</span></span><br><span class="line">            width: <span class="number">100</span>vw;</span><br><span class="line">            height: <span class="number">100</span>vh;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 设置盒模型 */</span></span><br><span class="line">            box-sizing: border-box;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 设置边距 */</span></span><br><span class="line">            margin: <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 设置背景渐变 */</span></span><br><span class="line">            background: radial-<span class="title function_ invoke__">gradient</span>(circle, #<span class="number">3</span>f87a6, #<span class="number">1e3</span>c72);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">        &lt;div id=<span class="string">&quot;all&quot;</span>&gt;</span><br><span class="line">            &lt;div id=<span class="string">&quot;zhong&quot;</span>&gt;</span><br><span class="line">                &lt;table&gt;</span><br><span class="line"></span><br><span class="line">                    &lt;tr&gt;</span><br><span class="line">                        &lt;td&gt;</span><br><span class="line">                            &lt;el-input v-model=<span class="string">&quot;userData.username&quot;</span> placeholder=<span class="string">&quot;请输入用户名&quot;</span>&gt;&lt;/el-input&gt;               <span class="comment">//v-model后为自己创建的变量，接收后面placeholder的值（为网站输入）</span></span><br><span class="line">                        &lt;/td&gt;</span><br><span class="line">                    &lt;/tr&gt;</span><br><span class="line">                    &lt;tr&gt;</span><br><span class="line">                        &lt;td&gt;</span><br><span class="line">                            &lt;el-input v-model=<span class="string">&quot;userData.password&quot;</span> placeholder=<span class="string">&quot;请输入密码&quot;</span> show-password&gt;&lt;/el-input&gt;</span><br><span class="line">                        &lt;/td&gt;</span><br><span class="line">                    &lt;/tr&gt;</span><br><span class="line">                    &lt;tr&gt;</span><br><span class="line">                        &lt;td&gt;</span><br><span class="line">                            &lt;el-button type=<span class="string">&quot;primary&quot;</span> @click=<span class="string">&quot;login&quot;</span>&gt;登录&lt;/el-button&gt;                            <span class="comment">//点击后调用login方法 tape为输入框 @click为点击事件</span></span><br><span class="line">                            &lt;el-button type=<span class="string">&quot;primary&quot;</span>&gt;重置&lt;/el-button&gt;</span><br><span class="line"></span><br><span class="line">                        &lt;/td&gt;</span><br><span class="line">                    &lt;/tr&gt;</span><br><span class="line"></span><br><span class="line">                &lt;/table&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;script src=<span class="string">&quot;./axios.min.js&quot;</span>&gt;&lt;/script&gt;                         <span class="comment">//导入axios.min.js文件    此文件作用为？</span></span><br><span class="line">    &lt;script src=<span class="string">&quot;./index.js&quot;</span>&gt;&lt;/script&gt;                             <span class="comment">//导入index.js文件         ？</span></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">            el: <span class="string">&#x27;#app&#x27;</span>,                                 </span><br><span class="line">            data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;                                           <span class="comment">//后面为自己创建的变量</span></span><br><span class="line">                    visible: <span class="literal">false</span>,</span><br><span class="line">                    userData: &#123;                                    <span class="comment">//数组类似结构体</span></span><br><span class="line">                        username: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                        password: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="title function_ invoke__">created</span>() &#123;</span><br><span class="line">                this.<span class="title function_ invoke__">login2</span>();                                     <span class="comment">//this指全局来调用login2方法</span></span><br><span class="line">            &#125;,</span><br><span class="line">            methods: &#123;</span><br><span class="line">                login: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                    axios.<span class="title function_ invoke__">post</span>(<span class="string">&#x27;/api/login.php&#x27;</span>, this.userData)    <span class="comment">//将这里的变量userData传给后端（api/login.php为后端接口）</span></span><br><span class="line">                        .<span class="title function_ invoke__">then</span>((response) =&gt; &#123;                      <span class="comment">//.then表axios.post成功后的操作，返回了response（这个由后端定义）</span></span><br><span class="line">                            console.<span class="title function_ invoke__">log</span>(response);                 <span class="comment">//在控制台输出response的内容</span></span><br><span class="line">                            <span class="keyword">if</span> (response.data.<span class="title function_ invoke__">includes</span>(<span class="string">&#x27;success&#x27;</span>)) &#123;        <span class="comment">//判断response中是否包含success字符串，如果包含，则执行下面的操作</span></span><br><span class="line">                                this.<span class="title function_ invoke__">open1</span>();</span><br><span class="line">                            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                this.<span class="title function_ invoke__">open4</span>();</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;)</span><br><span class="line">                        .<span class="keyword">catch</span>((error) =&gt; &#123;                                 <span class="comment">//.catch表axios.post失败后的操作，返回了error（这个由后端定义）</span></span><br><span class="line">                            console.<span class="title function_ invoke__">log</span>(<span class="string">&#x27;发送失败:&#x27;</span>, error);</span><br><span class="line">                        &#125;)</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="title function_ invoke__">open1</span>() &#123;</span><br><span class="line">                    this.<span class="variable">$notify</span>(&#123;</span><br><span class="line">                        title: <span class="string">&#x27;成功&#x27;</span>,</span><br><span class="line">                        message: <span class="string">&#x27;这是一条成功的提示消息&#x27;</span>,</span><br><span class="line">                        type: <span class="string">&#x27;success&#x27;</span></span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="title function_ invoke__">open4</span>() &#123;</span><br><span class="line">                    this.<span class="variable">$notify</span>.<span class="title function_ invoke__">error</span>(&#123;</span><br><span class="line">                        <span class="attr">title</span>: <span class="string">&#x27;错误&#x27;</span>,</span><br><span class="line">                        <span class="attr">message</span>: <span class="string">&#x27;这是一条错误的提示消息&#x27;</span></span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;en&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;                                                        <span class="comment">//设置编码格式</span></span><br><span class="line">    &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;        <span class="comment">//？</span></span><br><span class="line">    &lt;title&gt;登录&lt;/title&gt;                                                       <span class="comment">//设置网页标题</span></span><br><span class="line">    &lt;link rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;./index.css&quot;</span>&gt;                                <span class="comment">// rel表示链接关系，href表示链接</span></span><br><span class="line">    &lt;script src=<span class="string">&quot;./vue.js&quot;</span>&gt;&lt;/script&gt;                                          <span class="comment">//引入vue.js（是文件里的javascript源文件）</span></span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        <span class="comment">#zhong &#123;</span></span><br><span class="line">            <span class="comment">/* 将元素定位到窗口中央 */</span></span><br><span class="line">            position: absolute;</span><br><span class="line">            top: <span class="number">50</span>%;</span><br><span class="line">            left: <span class="number">50</span>%;</span><br><span class="line">            transform: <span class="title function_ invoke__">translate</span>(-<span class="number">50</span>%, -<span class="number">50</span>%);</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 设置宽度和最大宽度 */</span></span><br><span class="line">            width: <span class="number">50</span>%;</span><br><span class="line">            max-width: <span class="number">800</span>px;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 设置高度和最大高度 */</span></span><br><span class="line">            height: <span class="number">50</span>%;</span><br><span class="line">            max-height: <span class="number">600</span>px;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 使元素水平居中和垂直居中 */</span></span><br><span class="line">            display: flex;</span><br><span class="line">            justify-content: center;</span><br><span class="line">            align-items: center;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 设置背景颜色 */</span></span><br><span class="line">            background: <span class="comment">#7a368b;</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#all &#123;</span></span><br><span class="line">            <span class="comment">/* 设置元素宽度和高度为浏览器视口宽度和高度 */</span></span><br><span class="line">            width: <span class="number">100</span>vw;</span><br><span class="line">            height: <span class="number">100</span>vh;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 设置盒模型 */</span></span><br><span class="line">            box-sizing: border-box;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 设置边距 */</span></span><br><span class="line">            margin: <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/* 设置背景渐变 */</span></span><br><span class="line">            background: radial-<span class="title function_ invoke__">gradient</span>(circle, #<span class="number">3</span>f87a6, #<span class="number">1e3</span>c72);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">        &lt;div id=<span class="string">&quot;all&quot;</span>&gt;</span><br><span class="line">            &lt;div id=<span class="string">&quot;zhong&quot;</span>&gt;</span><br><span class="line">                &lt;table&gt;</span><br><span class="line"></span><br><span class="line">                    &lt;tr&gt;</span><br><span class="line">                        &lt;td&gt;</span><br><span class="line">                            &lt;el-input v-model=<span class="string">&quot;userData.username&quot;</span> placeholder=<span class="string">&quot;请输入用户名&quot;</span>&gt;&lt;/el-input&gt;               <span class="comment">//v-model后为自己创建的变量，接收后面placeholder的值（为网站输入）</span></span><br><span class="line">                        &lt;/td&gt;</span><br><span class="line">                    &lt;/tr&gt;</span><br><span class="line">                    &lt;tr&gt;</span><br><span class="line">                        &lt;td&gt;</span><br><span class="line">                            &lt;el-input v-model=<span class="string">&quot;userData.password&quot;</span> placeholder=<span class="string">&quot;请输入密码&quot;</span> show-password&gt;&lt;/el-input&gt;</span><br><span class="line">                        &lt;/td&gt;</span><br><span class="line">                    &lt;/tr&gt;</span><br><span class="line">                    &lt;tr&gt;</span><br><span class="line">                        &lt;td&gt;</span><br><span class="line">                            &lt;el-button type=<span class="string">&quot;primary&quot;</span> @click=<span class="string">&quot;login&quot;</span>&gt;登录&lt;/el-button&gt;                            <span class="comment">//点击后调用login方法 tape为输入框 @click为点击事件</span></span><br><span class="line">                            &lt;el-button type=<span class="string">&quot;primary&quot;</span>&gt;重置&lt;/el-button&gt;</span><br><span class="line"></span><br><span class="line">                        &lt;/td&gt;</span><br><span class="line">                    &lt;/tr&gt;</span><br><span class="line"></span><br><span class="line">                &lt;/table&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;script src=<span class="string">&quot;./axios.min.js&quot;</span>&gt;&lt;/script&gt;                         <span class="comment">//导入axios.min.js文件    此文件作用为？</span></span><br><span class="line">    &lt;script src=<span class="string">&quot;./index.js&quot;</span>&gt;&lt;/script&gt;                             <span class="comment">//导入index.js文件         ？</span></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">            el: <span class="string">&#x27;#app&#x27;</span>,                                 </span><br><span class="line">            data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;                                           <span class="comment">//后面为自己创建的变量</span></span><br><span class="line">                    visible: <span class="literal">false</span>,</span><br><span class="line">                    userData: &#123;                                    <span class="comment">//数组类似结构体</span></span><br><span class="line">                        username: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                        password: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="title function_ invoke__">created</span>() &#123;</span><br><span class="line">                this.<span class="title function_ invoke__">login2</span>();                                     <span class="comment">//this指全局来调用login2方法</span></span><br><span class="line">            &#125;,</span><br><span class="line">            methods: &#123;</span><br><span class="line">                login: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                    axios.<span class="title function_ invoke__">post</span>(<span class="string">&#x27;/api/login.php&#x27;</span>, this.userData)    <span class="comment">//将这里的变量userData传给后端（api/login.php为后端接口）</span></span><br><span class="line">                        .<span class="title function_ invoke__">then</span>((response) =&gt; &#123;                      <span class="comment">//.then表axios.post成功后的操作，返回了response（这个由后端定义）</span></span><br><span class="line">                            console.<span class="title function_ invoke__">log</span>(response);                 <span class="comment">//在控制台输出response的内容</span></span><br><span class="line">                            <span class="keyword">if</span> (response.data.<span class="title function_ invoke__">includes</span>(<span class="string">&#x27;success&#x27;</span>)) &#123;        <span class="comment">//判断response中是否包含success字符串，如果包含，则执行下面的操作</span></span><br><span class="line">                                this.<span class="title function_ invoke__">open1</span>();</span><br><span class="line">                            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                this.<span class="title function_ invoke__">open4</span>();</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;)</span><br><span class="line">                        .<span class="keyword">catch</span>((error) =&gt; &#123;                                 <span class="comment">//.catch表axios.post失败后的操作，返回了error（这个由后端定义）</span></span><br><span class="line">                            console.<span class="title function_ invoke__">log</span>(<span class="string">&#x27;发送失败:&#x27;</span>, error);</span><br><span class="line">                        &#125;)</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="title function_ invoke__">open1</span>() &#123;</span><br><span class="line">                    this.<span class="variable">$notify</span>(&#123;</span><br><span class="line">                        title: <span class="string">&#x27;成功&#x27;</span>,</span><br><span class="line">                        message: <span class="string">&#x27;这是一条成功的提示消息&#x27;</span>,</span><br><span class="line">                        type: <span class="string">&#x27;success&#x27;</span></span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="title function_ invoke__">open4</span>() &#123;</span><br><span class="line">                    this.<span class="variable">$notify</span>.<span class="title function_ invoke__">error</span>(&#123;</span><br><span class="line">                        <span class="attr">title</span>: <span class="string">&#x27;错误&#x27;</span>,</span><br><span class="line">                        <span class="attr">message</span>: <span class="string">&#x27;这是一条错误的提示消息&#x27;</span></span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+    
+  <nav id="article-nav" class="wow fadeInUp">
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="" class="lazyload">
+        
+      
+      <a href="/2024/07/13/7.12%20%20html%20php%20mysql/"></a>
+      <div class="article-nav-caption">Older</div>
+      <h3 class="article-nav-title">
+        
+          (no title)
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
+  
+</article>
+
+
+
+
+
+
+</section>
+          
+            <aside id="sidebar">
+  <div class="sidebar-wrap wow fadeInRight wrap-sticky">
+    
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/muoubenou.webp" data-sizes="auto" alt="John Doe" class="lazyload">
+  <div class="sidebar-author-name">John Doe</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Categories</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">Home</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">Archives</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">About</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">Friend</div>
+    </div>
+  
+</div>
+</div>
+    
+    
+      <div class="sidebar-btn-wrapper" style="position:static">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+    
+  </div>
+
+  
+</aside>
+
+          
+        </div>
+        <footer id="footer" class="wow fadeInUp">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      <div>
+        <span class="icon-copyright"></span>
+        2020-2024
+        <span class="footer-info-sep"></span>
+        John Doe
+      </div>
+      
+        <div>
+          Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>&nbsp;
+          Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" target="_blank">Reimu</a>
+        </div>
+      
+      
+        <div>
+          <span class="icon-brush"></span>
+          3.9k
+          &nbsp;|&nbsp;
+          <span class="icon-coffee"></span>
+          00:16
+        </div>
+      
+      
+        <div>
+          <span class="icon-eye"></span>
+          <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+          &nbsp;|&nbsp;
+          <span class="icon-user"></span>
+          <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+        </div>
+      
+    </div>
+  </div>
+</footer>
+
+        <div class="sidebar-top">
+          <img src="/images/taichi.png" height="50" width="50" alt="backtop" />
+          <div class="arrow-up"></div>
+        </div>
+        <div id="mask"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/muoubenou.webp" data-sizes="auto" alt="John Doe" class="lazyload">
+  <div class="sidebar-author-name">John Doe</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Categories</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">Home</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">Archives</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">About</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">Friend</div>
+    </div>
+  
+</div>
+</div>
+    
+  </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
+  
+</nav>
+
+    </div>
+    <div class="site-search">
+      <div class="reimu-popup popup">
+        <div class="reimu-search">
+          <span class="reimu-search-input-icon"></span>
+          <div class="reimu-search-input" id="reimu-search-input"></div>
+        </div>
+        <div class="reimu-results">
+          <div id="reimu-stats"></div>
+          <div id="reimu-hits"></div>
+          <div id="reimu-pagination" class="reimu-pagination"></div>
+        </div>
+        <span class="popup-btn-close"></span>
+      </div>
+    </div>
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+<script type="module" data-pjax>
+  import PhotoSwipeLightbox from "https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.js";
+  
+  const pswp = () => {
+    if (_$$('.article-entry a.article-gallery-item').length > 0) {
+      new PhotoSwipeLightbox({
+        gallery: '.article-entry',
+        children: 'a.article-gallery-item',
+        pswpModule: () => import("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.js")
+      }).init();
+    }
+    if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+      new PhotoSwipeLightbox({
+        gallery: '.article-gallery',
+        children: 'a.article-gallery-item',
+        pswpModule: () => import("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.js")
+      }).init();
+    }
+    window.lightboxStatus = 'done';
+    window.removeEventListener('lightbox:ready', pswp);
+  }
+  if(window.lightboxStatus === 'ready') {
+    pswp()
+  } else {
+    window.addEventListener('lightbox:ready', pswp);
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.0.4/dist/index.umd.js"></script>
+
+  <script>
+    firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '0.2.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+
+
+  <!-- hexo injector body_end start -->
+<script src="/js/insert_highlight.js" data-pjax></script>
+<!-- hexo injector body_end end --></body>
+  </html>
+
