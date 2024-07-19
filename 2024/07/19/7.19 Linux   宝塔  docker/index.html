@@ -1,0 +1,656 @@
+
+  <!DOCTYPE html>
+  <html lang="en"  >
+  <head>
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  
+  <script>window.icon_font = '4552607_tq6stt6tcg';window.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ"};</script>
+  
+  
+  <title>
+    
+    Hexo
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CUbuntu%20Mono:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CUbuntu%20Mono:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+<link rel="stylesheet" href="/css/loader.css">
+
+  <meta name="description" content="Linux 严格区分大小写Linux中的所有内容都以文件形式保存，包括硬件 硬盘的文件是&#x2F;dev&#x2F;sd[a-p]光盘文件是&#x2F;dev&#x2F;sr0 等Linux不靠拓展名区分文件类型 Linux的所有储存设备都需要有挂载后（也就是创造了文件夹）才能使用。包括硬盘u盘和光盘 下面是要记的  常见命令  ls 目录处理命令 命令所在路径&#x2F;bin&#x2F;ls">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/07/19/7.19%20Linux%20%20%20%E5%AE%9D%E5%A1%94%20%20docker/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Linux 严格区分大小写Linux中的所有内容都以文件形式保存，包括硬件 硬盘的文件是&#x2F;dev&#x2F;sd[a-p]光盘文件是&#x2F;dev&#x2F;sr0 等Linux不靠拓展名区分文件类型 Linux的所有储存设备都需要有挂载后（也就是创造了文件夹）才能使用。包括硬盘u盘和光盘 下面是要记的  常见命令  ls 目录处理命令 命令所在路径&#x2F;bin&#x2F;ls">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/webp/46252388/1721376761226-03ee6c8b-2e8b-4d1c-bc1b-7639e4ee6c43.webp#averageHue=%23f4f4f4&clientId=ub42f64c1-271d-4&from=drop&height=132&id=uccfde6ad&originHeight=497&originWidth=1093&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=26498&status=done&style=none&taskId=uf4151b02-c008-4009-a902-b085ff7b24a&title=&width=290.3333740234375">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/webp/46252388/1721376894785-47779f6a-37ce-402e-8709-f9df4f3684e5.webp#averageHue=%23e4e3e3&clientId=ub42f64c1-271d-4&from=drop&height=180&id=u2000d35c&originHeight=653&originWidth=1125&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=86264&status=done&style=none&taskId=u3669913c-16cd-4cad-ba78-047b02f1117&title=&width=309.3333740234375">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/webp/46252388/1721376906292-4c397912-c4db-4117-b7bd-aa750b97ffd2.webp#averageHue=%23dfdede&clientId=ub42f64c1-271d-4&from=drop&height=176&id=uab83031a&originHeight=623&originWidth=1116&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=126332&status=done&style=none&taskId=u0d1cb028-9312-4e1d-9a3b-b739d8df930&title=&width=315.3333740234375">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/webp/46252388/1721376918322-678ec914-776c-445b-a2ed-13846a0eb798.webp#averageHue=%23e4e4e4&clientId=ub42f64c1-271d-4&from=drop&height=215&id=u33129b9f&originHeight=625&originWidth=988&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=91282&status=done&style=none&taskId=ufb57010a-b2f5-42aa-ae68-b28325b72aa&title=&width=339.3333740234375">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721378809041-951091b7-73e0-4eba-9c76-497488a57d87.png#averageHue=%232c2a28&clientId=ub42f64c1-271d-4&from=paste&height=339&id=u8519ab71&originHeight=509&originWidth=756&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=68299&status=done&style=none&taskId=u26e28056-867e-48ec-a2fe-d8cace5b205&title=&width=504">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/webp/46252388/1721377430651-e4a15e90-b328-417a-aeac-b66a73f1c5b5.webp#averageHue=%23f9f9f9&clientId=ub42f64c1-271d-4&from=drop&height=236&id=u240a95f7&originHeight=392&originWidth=947&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=14592&status=done&style=none&taskId=udd33a30b-db73-45dc-8a12-4eeaa7e9126&title=&width=569.3333740234375">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721387418206-225536f2-d1e1-4068-9441-5715ba1baa0f.png#averageHue=%23b9d36d&clientId=u0a207b15-d04a-4&from=paste&height=45&id=uffac2040&originHeight=67&originWidth=299&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=3015&status=done&style=none&taskId=u649c115f-4567-49c4-9177-a390b6ada2f&title=&width=199.33333333333334">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721387498607-f418c820-7157-4965-a45c-ba5c392ea5b1.png#averageHue=%232b2a29&clientId=u0a207b15-d04a-4&from=paste&height=252&id=u36ac43fa&originHeight=378&originWidth=906&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=38525&status=done&style=none&taskId=u7df4cb9f-29e4-40c6-80e5-4da704ecec0&title=&width=604">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721387953923-2cb2d087-183d-4a11-b8ee-0746f018cac0.png#averageHue=%23282725&clientId=u0a207b15-d04a-4&from=paste&height=111&id=u88741fe5&originHeight=166&originWidth=931&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=26179&status=done&style=none&taskId=u66e248ab-f58f-4daf-ac91-222a2fbb3f3&title=&width=620.6666666666666">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721388063881-5151402b-7983-4fc8-8029-4a0d8e879225.png#averageHue=%232d333b&clientId=u0a207b15-d04a-4&from=paste&height=29&id=ue016f311&originHeight=43&originWidth=208&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=1352&status=done&style=none&taskId=u779642d1-22a4-4ef9-b7b4-9ab0a4f6c73&title=&width=138.66666666666666">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721388104321-7a93dd2f-e1a4-4d75-aace-a6efa56a7f02.png#averageHue=%23e4e2ae&clientId=u0a207b15-d04a-4&from=paste&height=109&id=u93bd4897&originHeight=163&originWidth=1005&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=21479&status=done&style=none&taskId=u296e4d37-7f1a-4255-a673-7ac8f5213fc&title=&width=670">
+<meta property="article:published_time" content="2024-07-19T11:25:51.379Z">
+<meta property="article:modified_time" content="2024-07-19T11:25:23.103Z">
+<meta property="article:author" content="muoubenou">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2024/webp/46252388/1721376761226-03ee6c8b-2e8b-4d1c-bc1b-7639e4ee6c43.webp#averageHue=%23f4f4f4&clientId=ub42f64c1-271d-4&from=drop&height=132&id=uccfde6ad&originHeight=497&originWidth=1093&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=26498&status=done&style=none&taskId=uf4151b02-c008-4009-a902-b085ff7b24a&title=&width=290.3333740234375">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css">
+
+  
+  
+  
+  
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"></script>
+
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/wowjs@1.1.3/css/libs/animate.css">
+
+    
+<script src="https://npm.webcache.cn/wowjs@1.1.3/dist/wow.min.js"></script>
+
+    <script>
+      new WOW({
+        offset: 0,
+        mobile: true,
+        live: false
+      }).init();
+    </script>
+  
+  
+    <script src="/sw.js"></script>
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+          <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff6e6b" />
+          <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z" fill="#fd0d00" />
+          <path d="M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95" fill="#fd0d00" />
+        </svg>
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      <span class="main-nav-link-wrap">
+        <span class="main-nav-icon"></span>
+        <a class="main-nav-link" href="/">Home</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <span class="main-nav-icon"></span>
+        <a class="main-nav-link" href="/archives">Archives</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <span class="main-nav-icon"></span>
+        <a class="main-nav-link" href="/about">About</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <span class="main-nav-icon"></span>
+        <a class="main-nav-link" href="/friend">Friend</a>
+      </span>
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+    
+    
+    
+  </nav>
+</div>
+<header id="header">
+  
+    
+      <img fetchpriority="high" src="/images/banner.webp" alt="">
+    
+  
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <div id="logo-wrap">
+        
+          
+          
+            <a href="/" id="logo">
+              <h1>Hexo</h1>
+            </a>
+          
+        
+      </div>
+      
+        
+        <h2 id="subtitle-wrap">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content" class="outer">
+          
+          <section id="main"><article id="post-7.19 Linux   宝塔  docker" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    <div class="article-meta">
+      <div class="article-date wow slideInLeft">
+  <a href="/2024/07/19/7.19%20Linux%20%20%20%E5%AE%9D%E5%A1%94%20%20docker/" class="article-date-link">
+    <time datetime="2024-07-19T11:25:51.379Z" itemprop="datePublished">2024-07-19</time>
+  </a>
+</div>
+
+      
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Linux 严格区分大小写<br />Linux中的所有内容都以文件形式保存，包括硬件</p>
+<p>硬盘的文件是&#x2F;dev&#x2F;sd[a-p]<br />光盘文件是&#x2F;dev&#x2F;sr0 等<br />Linux不靠拓展名区分文件类型<br /> <img src="https://cdn.nlark.com/yuque/0/2024/webp/46252388/1721376761226-03ee6c8b-2e8b-4d1c-bc1b-7639e4ee6c43.webp#averageHue=%23f4f4f4&clientId=ub42f64c1-271d-4&from=drop&height=132&id=uccfde6ad&originHeight=497&originWidth=1093&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=26498&status=done&style=none&taskId=uf4151b02-c008-4009-a902-b085ff7b24a&title=&width=290.3333740234375" alt="image.webp"><br />Linux的所有储存设备都需要有挂载后（也就是创造了文件夹）才能使用。包括硬盘u盘和光盘</p>
+<p><strong>下面是要记的</strong></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/webp/46252388/1721376894785-47779f6a-37ce-402e-8709-f9df4f3684e5.webp#averageHue=%23e4e3e3&clientId=ub42f64c1-271d-4&from=drop&height=180&id=u2000d35c&originHeight=653&originWidth=1125&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=86264&status=done&style=none&taskId=u3669913c-16cd-4cad-ba78-047b02f1117&title=&width=309.3333740234375" alt="image.webp"><img src="https://cdn.nlark.com/yuque/0/2024/webp/46252388/1721376906292-4c397912-c4db-4117-b7bd-aa750b97ffd2.webp#averageHue=%23dfdede&clientId=ub42f64c1-271d-4&from=drop&height=176&id=uab83031a&originHeight=623&originWidth=1116&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=126332&status=done&style=none&taskId=u0d1cb028-9312-4e1d-9a3b-b739d8df930&title=&width=315.3333740234375" alt="image.webp"><img src="https://cdn.nlark.com/yuque/0/2024/webp/46252388/1721376918322-678ec914-776c-445b-a2ed-13846a0eb798.webp#averageHue=%23e4e4e4&clientId=ub42f64c1-271d-4&from=drop&height=215&id=u33129b9f&originHeight=625&originWidth=988&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=91282&status=done&style=none&taskId=ufb57010a-b2f5-42aa-ae68-b28325b72aa&title=&width=339.3333740234375" alt="image.webp"></p>
+<p>常见命令</p>
+<ol>
+<li>ls 目录处理命令 命令所在路径&#x2F;bin&#x2F;ls</li>
+</ol>
+<p>执行权限：所有用户。功能：显示目录文件<br />语法：ls  -选ald +文件或目录<br />-a 显示所有文件，包括隐藏文件<br />-l  详细信息显示<br />-d 查看目录属性<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721378809041-951091b7-73e0-4eba-9c76-497488a57d87.png#averageHue=%232c2a28&clientId=ub42f64c1-271d-4&from=paste&height=339&id=u8519ab71&originHeight=509&originWidth=756&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=68299&status=done&style=none&taskId=u26e28056-867e-48ec-a2fe-d8cace5b205&title=&width=504" alt="image.png"><br />最前面的 l 表示文件  d表示路径<br /><img src="https://cdn.nlark.com/yuque/0/2024/webp/46252388/1721377430651-e4a15e90-b328-417a-aeac-b66a73f1c5b5.webp#averageHue=%23f9f9f9&clientId=ub42f64c1-271d-4&from=drop&height=236&id=u240a95f7&originHeight=392&originWidth=947&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=14592&status=done&style=none&taskId=udd33a30b-db73-45dc-8a12-4eeaa7e9126&title=&width=569.3333740234375" alt="image.webp"><br />意思是所有者可以执行rw的权限，所属者可以执行r的权限  其他人可以执行r的权限</p>
+<p> 后面的依次为文件访问次数 所有者 所属组 大小 最后一次修改时间 文件名</p>
+<ol start="2">
+<li>目录处理命令：mkdir               所在路径&#x2F;bin&#x2F;mkdir 执行权限所有用户</li>
+</ol>
+<p>语法： mkdir -p 目录名   功能创建目录，还可以创造递归<br />                  -p 就是创造递归<br />实例： mkdir -p &#x2F;tmp&#x2F;japan&#x2F;boduo<br />在tmp里面创建了japan，在japan里面创建了bpduo<br /><strong>注意：在linux里面，若是用开头用了 &#x2F; 表示路径，着路径一定是从根目录出发</strong>** **</p>
+<ol start="3">
+<li>目录处理命令 ：cd                   所在路径shell内置命令  所有用户</li>
+</ol>
+<p>语法： cd 目录<br />范例： cd &#x2F;tmp&#x2F;japan&#x2F;bpduo  切换到指定目录<br />           cd ..           返回上一级目录</p>
+<ol start="4">
+<li>目录处理命令：pwd     所在路径 &#x2F;bin&#x2F;pwd   所有用户</li>
+</ol>
+<p>功能 显示当前目录的路径<br />语法 在自己想要查询的目录下输入 pwd</p>
+<ol start="5">
+<li>文件处理命令 ：rmdir  命令所在路径 &#x2F;bin&#x2F;rmdir   所有用户</li>
+</ol>
+<p>功能：删除空目录<br />语法：rmdir 目录名<br />  范例： rmdir &#x2F;tmp&#x2F;Japan&#x2F;bpduo</p>
+<ol start="6">
+<li>目录处理命令：cp   命令所在路径&#x2F;bin&#x2F;cp</li>
+</ol>
+<p> 功能：复制文件或目录<br />语法：cp -rp 源文件或目录 目标目录<br />           -r 复制目录<br />     	   -p保留文件属性<br />范例：cp -rp &#x2F;tmp&#x2F;japan&#x2F;cangjing  &#x2F;root 复制到目录下，并保持目录属性<br />在最后再加上复制到的目录没有的文件名，可以给路径重命名</p>
+<ol start="7">
+<li>目录处理命令：mv    命令所在路径 &#x2F;bin&#x2F;mv    所有用户</li>
+</ol>
+<p>  作用：剪切文件、改名<br />语法： mv 源文件名 目标目录</p>
+<ol start="8">
+<li>目录处理命令 ：rm   命令路径&#x2F;bin&#x2F;rm</li>
+</ol>
+<p>  作用：删除文件<br />  语法： rm -rf 文件或目录<br />                  -r 删除目录<br />   		  -f  强制执行<br /><strong>注意强制执行级别很高，甚至可以删除根目录吗，使用时要注意</strong></p>
+<ol start="9">
+<li>文件处理命令 ： touch  命令路径· &#x2F;bin&#x2F;touch</li>
+</ol>
+<p> 作用：创建空文件<br />语法 touch 文件名</p>
+<ol start="10">
+<li>文件处理命令：cat  命令所在路径 &#x2F;bin&#x2F;cat</li>
+</ol>
+<p> 作用：显示文件内容<br /> 语法 cat 文件名<br />        -n 显示行号</p>
+<ol start="11">
+<li>文件处理命令： tac</li>
+</ol>
+<p>作用：显示文件内容（反向演示）<br />语法：tac 文件名</p>
+<ol start="12">
+<li>vi 文件名 vi相当于编译器</li>
+</ol>
+<p>  进入之后按i就可以开始输入<br />输入完之后按esc 之后输入   ：wq  就可以退出并且保存了</p>
+<ol start="13">
+<li>linux里面的中断命令为ctrl加c</li>
+</ol>
+<p>安装docter<br />什么是docter ，docter是一个应用容器引擎，可以让开发者打包他们的应用，方便移植<br />我们也可以通过docter下载<br />以下是安装docker的步骤</p>
+<p>centos7</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1、yum 包更新到最新 </span></span><br><span class="line">sudo yum update 	</span><br><span class="line"><span class="comment"># 2、作用：安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</span></span><br><span class="line">sudo yum install -y yum-utils device-mapper-persistent-data lvm2 </span><br><span class="line"><span class="comment"># 3、 设置yum源 </span></span><br><span class="line"><span class="comment"># 3.1、方案一：使用ustc的（推荐） </span></span><br><span class="line">sudo yum-config-manager --add-repo http:<span class="comment">//mirrors.ustc.edu.cn/docker-ce/linux/centos/docker-ce.repo </span></span><br><span class="line"><span class="comment"># 3.2、方案二：使用阿里云（可能失败） </span></span><br><span class="line">sudo yum-config-manager --add-repo http:<span class="comment">//mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo </span></span><br><span class="line"><span class="comment"># 4、 安装docker；出现输入的界面都按 y </span></span><br><span class="line">sudo yum install -y docker-ce</span><br><span class="line"><span class="comment"># 5、 查看docker版本 </span></span><br><span class="line">docker -v</span><br></pre></td></tr></table></figure>
+
+<p>kali</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#更新软件包列表</span></span><br><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line"><span class="comment">#安装Docker的依赖包</span></span><br><span class="line">sudo apt install apt-transport-https ca-certificates curl software-properties-common</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加Docker官方的GPG密钥：</span></span><br><span class="line">curl -fsSL  | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加Docker的APT存储库</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg]  $(lsb_release -cs) stable&quot;</span> | sudo tee /etc/apt/sources.<span class="keyword">list</span>.d/docker.<span class="keyword">list</span> &gt; /dev/<span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#更新软件包列表并安装Docker</span></span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install docker-ce docker-ce-cli containerd.io</span><br><span class="line"></span><br><span class="line"><span class="comment">#确认Docker已成功安装并正在运行</span></span><br><span class="line">sudo systemctl status docker</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>宝塔的使用</strong></p>
+<p>宝塔的作用类似于php<br />不过可以实现让别人访问的网站<br />下面是宝塔的使用方法</p>
+<p>centos篇<br />先要知道自己虚拟机的ip地址</p>
+<p>先安装sshd</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.systemctl enable sshd</span><br><span class="line"><span class="number">2</span>.systemctl start sshd</span><br><span class="line"><span class="number">3</span>.vim /etc/ssh/sshd_config     esc :set nu显示行号</span><br><span class="line"><span class="number">4.38</span>行去掉<span class="comment">#后面没有yes就添加yes即可，PermitRootLogin yes</span></span><br><span class="line"><span class="number">5</span>.systemctl restart sshd</span><br></pre></td></tr></table></figure>
+
+<p>之后再<img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721387418206-225536f2-d1e1-4068-9441-5715ba1baa0f.png#averageHue=%23b9d36d&clientId=u0a207b15-d04a-4&from=paste&height=45&id=uffac2040&originHeight=67&originWidth=299&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=3015&status=done&style=none&taskId=u649c115f-4567-49c4-9177-a390b6ada2f&title=&width=199.33333333333334" alt="image.png">上连接虚拟机<br />点击会话，输入虚拟机的账号和密码<br />连接完毕后会出现<img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721387498607-f418c820-7157-4965-a45c-ba5c392ea5b1.png#averageHue=%232b2a29&clientId=u0a207b15-d04a-4&from=paste&height=252&id=u36ac43fa&originHeight=378&originWidth=906&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=38525&status=done&style=none&taskId=u7df4cb9f-29e4-40c6-80e5-4da704ecec0&title=&width=604" alt="image.png"></p>
+<p>之后输入命令</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">yum install net-tools.x86_64 -y</span><br><span class="line">yum -y install epel-release</span><br><span class="line">yum -y install vim</span><br><span class="line">yum install unzip -y</span><br><span class="line">yum search wget -y</span><br><span class="line">yum install -y git</span><br><span class="line">yum install docker -y</span><br><span class="line">yum -y install python-pip</span><br><span class="line">yum install -y docker-compose</span><br><span class="line"></span><br><span class="line">systemctl restart docker</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>结束之后再输入</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tee /etc/docker/daemon.json &lt;&lt; <span class="string">&#x27;EOF&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="string">&quot;registry-mirrors&quot;</span>:[<span class="string">&quot;https://lkdykb0x.mirror.aliyuncs.com&quot;</span>,<span class="string">&quot;https://registry.docker-cn.com&quot;</span>,<span class="string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span>,<span class="string">&quot;https://dockerhub.azk8s.cn&quot;</span>,<span class="string">&quot;http://hub-mirror.c.163.com&quot;</span>,<span class="string">&quot;http://qtid6917.mirror.aliyuncs.com&quot;</span>,<span class="string">&quot;https://rncxm540.mirror.aliyuncs.com&quot;</span>,<span class="string">&quot;https://e9yneuy4.mirror.aliyuncs.com&quot;</span>]</span><br><span class="line">&#125; </span><br><span class="line">EOF</span><br><span class="line">systemctl daemon-reload &amp;&amp; systemctl restart docker</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker pull eugeneware/docker-wordpress-nginx</span><br><span class="line">git <span class="keyword">clone</span> https:<span class="comment">//github.com/eugeneware/docker-wordpress-nginx.git</span></span><br><span class="line">cd docker-wordpress-nginx</span><br><span class="line">sudo docker build -t=<span class="string">&quot;eugeneware/docker-wordpress-nginx&quot;</span> .</span><br><span class="line">sudo docker run -p <span class="number">80</span>:<span class="number">80</span> --name docker-wordpress-nginx -d eugeneware/docker-wordpress-nginx</span><br><span class="line">sudo docker start docker-wordpress-nginx</span><br></pre></td></tr></table></figure>
+
+<p>之后会出现<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721387953923-2cb2d087-183d-4a11-b8ee-0746f018cac0.png#averageHue=%23282725&clientId=u0a207b15-d04a-4&from=paste&height=111&id=u88741fe5&originHeight=166&originWidth=931&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=26179&status=done&style=none&taskId=u66e248ab-f58f-4daf-ac91-222a2fbb3f3&title=&width=620.6666666666666" alt="image.png"><br />再浏览器上输入内网的再输入密码，就可以进入宝塔了</p>
+<p>再浏览器上的宝塔我们需要安装 、阿帕奇、MySQL、php</p>
+<p>下面介绍如何制造网站<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721388063881-5151402b-7983-4fc8-8029-4a0d8e879225.png#averageHue=%232d333b&clientId=u0a207b15-d04a-4&from=paste&height=29&id=ue016f311&originHeight=43&originWidth=208&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=1352&status=done&style=none&taskId=u779642d1-22a4-4ef9-b7b4-9ab0a4f6c73&title=&width=138.66666666666666" alt="image.png">文件内装自己写号的前后端<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721388104321-7a93dd2f-e1a4-4d75-aace-a6efa56a7f02.png#averageHue=%23e4e2ae&clientId=u0a207b15-d04a-4&from=paste&height=109&id=u93bd4897&originHeight=163&originWidth=1005&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=21479&status=done&style=none&taskId=u296e4d37-7f1a-4255-a673-7ac8f5213fc&title=&width=670" alt="image.png"><br />这里的root密码是指虚拟机上的密码（它给我们自动创了一个数据库）</p>
+<p>我们可以在虚拟机上开放自己数据库的连接，这样子我们的就可以用数据库里面的东西了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+    
+  <nav id="article-nav" class="wow fadeInUp">
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="" class="lazyload">
+        
+      
+      <a href="/2024/07/19/7.14-17%20%20%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA%E5%AE%9E%E6%93%8D/"></a>
+      <div class="article-nav-caption">Older</div>
+      <h3 class="article-nav-title">
+        
+          (no title)
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
+  
+</article>
+
+
+
+
+
+
+</section>
+          
+            <aside id="sidebar">
+  <div class="sidebar-wrap wow fadeInRight wrap-sticky">
+    
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="muoubenou" class="lazyload">
+  <div class="sidebar-author-name">muoubenou</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Categories</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">Home</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">Archives</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">About</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">Friend</div>
+    </div>
+  
+</div>
+</div>
+    
+    
+      <div class="sidebar-btn-wrapper" style="position:static">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+    
+  </div>
+
+  
+</aside>
+
+          
+        </div>
+        <footer id="footer" class="wow fadeInUp">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      <div>
+        <span class="icon-copyright"></span>
+        2020-2024
+        <span class="footer-info-sep"></span>
+        muoubenou
+      </div>
+      
+        <div>
+          Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>&nbsp;
+          Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" target="_blank">Reimu</a>
+        </div>
+      
+      
+        <div>
+          <span class="icon-brush"></span>
+          16.9k
+          &nbsp;|&nbsp;
+          <span class="icon-coffee"></span>
+          01:20
+        </div>
+      
+      
+        <div>
+          <span class="icon-eye"></span>
+          <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+          &nbsp;|&nbsp;
+          <span class="icon-user"></span>
+          <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+        </div>
+      
+    </div>
+  </div>
+</footer>
+
+        <div class="sidebar-top">
+          <img src="/images/taichi.png" height="50" width="50" alt="backtop" />
+          <div class="arrow-up"></div>
+        </div>
+        <div id="mask"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="muoubenou" class="lazyload">
+  <div class="sidebar-author-name">muoubenou</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Categories</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">Home</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">Archives</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">About</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+      <span class="sidebar-menu-icon"></span>
+      <div class="sidebar-menu-link">Friend</div>
+    </div>
+  
+</div>
+</div>
+    
+  </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
+  
+</nav>
+
+    </div>
+    <div class="site-search">
+      <div class="reimu-popup popup">
+        <div class="reimu-search">
+          <span class="reimu-search-input-icon"></span>
+          <div class="reimu-search-input" id="reimu-search-input"></div>
+        </div>
+        <div class="reimu-results">
+          <div id="reimu-stats"></div>
+          <div id="reimu-hits"></div>
+          <div id="reimu-pagination" class="reimu-pagination"></div>
+        </div>
+        <span class="popup-btn-close"></span>
+      </div>
+    </div>
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+<script type="module" data-pjax>
+  import PhotoSwipeLightbox from "https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.js";
+  
+  const pswp = () => {
+    if (_$$('.article-entry a.article-gallery-item').length > 0) {
+      new PhotoSwipeLightbox({
+        gallery: '.article-entry',
+        children: 'a.article-gallery-item',
+        pswpModule: () => import("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.js")
+      }).init();
+    }
+    if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+      new PhotoSwipeLightbox({
+        gallery: '.article-gallery',
+        children: 'a.article-gallery-item',
+        pswpModule: () => import("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.js")
+      }).init();
+    }
+    window.lightboxStatus = 'done';
+    window.removeEventListener('lightbox:ready', pswp);
+  }
+  if(window.lightboxStatus === 'ready') {
+    pswp()
+  } else {
+    window.addEventListener('lightbox:ready', pswp);
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.0.4/dist/index.umd.js"></script>
+
+  <script>
+    firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '0.2.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+
+
+  <!-- hexo injector body_end start -->
+<script src="/js/insert_highlight.js" data-pjax></script>
+<!-- hexo injector body_end end --></body>
+  </html>
+
